@@ -1,0 +1,4 @@
+J:\Downloads\Open Hardware Monitor\open-hardware-monitor-read-only\Bin\Debug\OpenHardwareMonitorLib.dll
+J:\Downloads\Open Hardware Monitor\open-hardware-monitor-read-only\Bin\Debug\OpenHardwareMonitorLib.pdb
+J:\Downloads\Open Hardware Monitor\open-hardware-monitor-read-only\obj\Debug\OpenHardwareMonitorLib.dll
+J:\Downloads\Open Hardware Monitor\open-hardware-monitor-read-only\obj\Debug\OpenHardwareMonitorLib.pdb

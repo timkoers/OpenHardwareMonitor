@@ -1,0 +1,109 @@
+<html>
+
+<head>
+    <title>Open Hardware Monitor - Web Version</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="css/ohm_web.css" rel="stylesheet" type="text/css" />
+
+    <script type='text/javascript' src='js/jquery-1.11.1.min.js'></script>
+    <script type='text/javascript' src='js/knockout-3.1.0.js'></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script type="text/html" id="children-template">
+        <li>
+            <!-- ko if:Children.length > 0 -->
+            <a class="collapsebutton" data-bind="click: function(){collapsed(!collapsed())}">
+                <span class="glyphicon" data-bind="css: collapseButtonGlyph"></span>
+            </a>
+            <!-- /ko -->
+            <img data-bind="attr{src:ImageURL}">
+            <span data-bind = "text: Text"></span>
+            <!-- ko if:Children.length > 0 -->
+            <span class="badge" data-bind="text: Children.length"></span>
+            <!-- /ko -->
+            <!-- ko if: !collapsed() -->
+                <ul data-bind="template:{name: 'children-template', foreach: Children}"></ul>
+            <!-- /ko -->
+        </li>
+    </script>
+    
+    <script>
+        function ViewModel() {
+            var self = this;
+            self.list = ko.observableArray();
+            self.refresh = function () {$
+                loadJSON();
+            };
+
+            var loadJSON = function () {
+                console.log("loadJSON fired");
+                var url = "data.json";
+                $.ajax({
+                    url: url,
+                    dataType: 'json',
+                    success: function (result) {
+                        console.log("succesfully retrieved data");
+                        window.result = result;
+                        var test = new ExtendedNode(result);
+                        list([test]);
+                    },
+                    error: function (request, textStatus, errorThrown) {
+                        console.log(textStatus, errorThrown);
+                    },
+                    complete: function (request, textStatus) { //for additional info
+                        console.log("AJAX call complete");
+                    }
+                });;
+            }
+            
+            function ExtendedNode(node){
+                node.collapsed = ko.observable(true);
+                node.collapseButtonText = ko.computed(
+                    function(){
+                        if(node.collapsed()){
+                            return "+";   
+                        }else{
+                            return "-";
+                        }
+                    }
+                );
+                
+                node.collapseButtonGlyph = ko.computed(
+                    function(){
+                        if(node.collapsed()){
+                            return "glyphicon-expand"; 
+                        }else{
+                             return "glyphicon-collapse-down";   
+                        }
+                    }
+                );
+                
+                if(node.Children){
+                    $.each(node.Children, function(key, child){
+                            child = new ExtendedNode(child);
+                    });
+                }
+                
+                return node;
+            }
+            self.refresh();
+        }
+
+        $(document).ready(function () {
+            ko.applyBindings(ViewModel);
+        });
+    </script>
+</head>
+
+<body>
+    <div id="application">
+        <h1>Open Hardware Monitor</h1>
+        <button class="btn btn-default" data-bind="click: refresh">Refresh <span class="glyphicon glyphicon-refresh"></span></button>
+        <br>
+
+        <ul class="collapsable" data-bind="template{name:'children-template',foreach: list}"></ul>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=Help.chm
+Contents file=Help\Table of Contents.hhc
+Display compile progress=No
+Index file=Help\Index.hhk
+Language=0x409 Engels (Verenigde Staten)
+Title=Open Hardware Monitor Help
+
+
+[INFOTYPES]
+

@@ -1,0 +1,19 @@
+#application{
+ margin: 10px;   
+}
+
+ul.collapsable{
+ list-style-type: none;   
+}
+
+ul.collapsable ul{
+ list-style-type: none;   
+}
+
+a.collapsebutton{
+    cursor: pointer
+}
+
+a.collapsebutton:hover{
+    text-decoration: none;
+}
