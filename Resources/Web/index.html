@@ -22,13 +22,27 @@
             <!-- ko if:Children.length > 0 -->
             <span class="badge" data-bind="text: Children.length"></span>
             <!-- /ko -->
-            <!-- ko if: !collapsed() -->
-                <ul data-bind="template:{name: 'children-template', foreach: Children}"></ul>
+            <!-- ko if: Value && Value != "Value" -->
+            Min: <span data-bind="text: Min"></span> | Value: <span data-bind="text: Value"></span> | Min: <span data-bind="text: Max"></span>
             <!-- /ko -->
+            <div data-bind="slideIf: !collapsed()">
+                <ul data-bind="template:{name: 'children-template', foreach: Children}"></ul>
+            </div>
         </li>
     </script>
     
     <script>
+        ko.bindingHandlers.slideIf = {
+            init: function(element, valueAccessor) {
+                var value = valueAccessor();
+                $(element).toggle(ko.unwrap(value));
+            },
+            update: function(element, valueAccessor) {
+                var value = valueAccessor();
+                ko.unwrap(value) ? $(element).slideDown() : $(element).slideUp();
+            }
+        };
+        
         function ViewModel() {
             var self = this;
             self.list = ko.observableArray();

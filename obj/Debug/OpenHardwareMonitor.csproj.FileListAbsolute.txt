@@ -18,3 +18,23 @@ J:\Downloads\Open Hardware Monitor\open-hardware-monitor-read-only\obj\Debug\Ope
 J:\Downloads\Open Hardware Monitor\open-hardware-monitor-read-only\obj\Debug\OpenHardwareMonitor.pdb
 J:\Downloads\Open Hardware Monitor\open-hardware-monitor-read-only\obj\Debug\OpenHardwareMonitor.GUI.RAMForm.resources
 J:\Downloads\Open Hardware Monitor\open-hardware-monitor-read-only\Bin\Debug\OpenHardwareMonitorLib.pdb
+C:\Users\Tim\Documents\GitHub\OpenHardwareMonitor\Bin\Debug\OpenHardwareMonitor.exe.config
+C:\Users\Tim\Documents\GitHub\OpenHardwareMonitor\Bin\Debug\OpenHardwareMonitor.exe
+C:\Users\Tim\Documents\GitHub\OpenHardwareMonitor\Bin\Debug\OpenHardwareMonitor.pdb
+C:\Users\Tim\Documents\GitHub\OpenHardwareMonitor\Bin\Debug\Aga.Controls.dll
+C:\Users\Tim\Documents\GitHub\OpenHardwareMonitor\Bin\Debug\OxyPlot.dll
+C:\Users\Tim\Documents\GitHub\OpenHardwareMonitor\Bin\Debug\OxyPlot.WindowsForms.dll
+C:\Users\Tim\Documents\GitHub\OpenHardwareMonitor\Bin\Debug\OpenHardwareMonitorLib.pdb
+C:\Users\Tim\Documents\GitHub\OpenHardwareMonitor\obj\Debug\OpenHardwareMonitor.csprojResolveAssemblyReference.cache
+C:\Users\Tim\Documents\GitHub\OpenHardwareMonitor\obj\Debug\OpenHardwareMonitor.GUI.AboutBox.resources
+C:\Users\Tim\Documents\GitHub\OpenHardwareMonitor\obj\Debug\OpenHardwareMonitor.GUI.HDDForm.resources
+C:\Users\Tim\Documents\GitHub\OpenHardwareMonitor\obj\Debug\OpenHardwareMonitor.GUI.PortForm.resources
+C:\Users\Tim\Documents\GitHub\OpenHardwareMonitor\obj\Debug\OpenHardwareMonitor.GUI.RAMForm.resources
+C:\Users\Tim\Documents\GitHub\OpenHardwareMonitor\obj\Debug\OpenHardwareMonitor.Properties.Resources.resources
+C:\Users\Tim\Documents\GitHub\OpenHardwareMonitor\obj\Debug\OpenHardwareMonitor.GUI.ParameterForm.resources
+C:\Users\Tim\Documents\GitHub\OpenHardwareMonitor\obj\Debug\OpenHardwareMonitor.GUI.CrashForm.resources
+C:\Users\Tim\Documents\GitHub\OpenHardwareMonitor\obj\Debug\OpenHardwareMonitor.GUI.MainForm.resources
+C:\Users\Tim\Documents\GitHub\OpenHardwareMonitor\obj\Debug\OpenHardwareMonitor.GUI.ReportForm.resources
+C:\Users\Tim\Documents\GitHub\OpenHardwareMonitor\obj\Debug\OpenHardwareMonitor.csproj.GenerateResource.Cache
+C:\Users\Tim\Documents\GitHub\OpenHardwareMonitor\obj\Debug\OpenHardwareMonitor.exe
+C:\Users\Tim\Documents\GitHub\OpenHardwareMonitor\obj\Debug\OpenHardwareMonitor.pdb
