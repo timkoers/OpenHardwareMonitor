@@ -24,7 +24,6 @@ C:\Users\Tim\Documents\GitHub\OpenHardwareMonitor\Bin\Debug\OpenHardwareMonitor.
 C:\Users\Tim\Documents\GitHub\OpenHardwareMonitor\Bin\Debug\Aga.Controls.dll
 C:\Users\Tim\Documents\GitHub\OpenHardwareMonitor\Bin\Debug\OxyPlot.dll
 C:\Users\Tim\Documents\GitHub\OpenHardwareMonitor\Bin\Debug\OxyPlot.WindowsForms.dll
-C:\Users\Tim\Documents\GitHub\OpenHardwareMonitor\Bin\Debug\OpenHardwareMonitorLib.pdb
 C:\Users\Tim\Documents\GitHub\OpenHardwareMonitor\obj\Debug\OpenHardwareMonitor.csprojResolveAssemblyReference.cache
 C:\Users\Tim\Documents\GitHub\OpenHardwareMonitor\obj\Debug\OpenHardwareMonitor.GUI.AboutBox.resources
 C:\Users\Tim\Documents\GitHub\OpenHardwareMonitor\obj\Debug\OpenHardwareMonitor.GUI.HDDForm.resources
@@ -38,3 +37,4 @@ C:\Users\Tim\Documents\GitHub\OpenHardwareMonitor\obj\Debug\OpenHardwareMonitor.
 C:\Users\Tim\Documents\GitHub\OpenHardwareMonitor\obj\Debug\OpenHardwareMonitor.csproj.GenerateResource.Cache
 C:\Users\Tim\Documents\GitHub\OpenHardwareMonitor\obj\Debug\OpenHardwareMonitor.exe
 C:\Users\Tim\Documents\GitHub\OpenHardwareMonitor\obj\Debug\OpenHardwareMonitor.pdb
+C:\Users\Tim\Documents\GitHub\OpenHardwareMonitor\Bin\Debug\OpenHardwareMonitorLib.pdb

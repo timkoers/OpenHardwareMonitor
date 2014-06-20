@@ -4,6 +4,5 @@ J:\Downloads\Open Hardware Monitor\open-hardware-monitor-read-only\obj\Debug\Ope
 J:\Downloads\Open Hardware Monitor\open-hardware-monitor-read-only\obj\Debug\OpenHardwareMonitorLib.pdb
 C:\Users\Tim\Documents\GitHub\OpenHardwareMonitor\Bin\Debug\OpenHardwareMonitorLib.dll
 C:\Users\Tim\Documents\GitHub\OpenHardwareMonitor\Bin\Debug\OpenHardwareMonitorLib.pdb
-C:\Users\Tim\Documents\GitHub\OpenHardwareMonitor\obj\Debug\OpenHardwareMonitorLib.csprojResolveAssemblyReference.cache
 C:\Users\Tim\Documents\GitHub\OpenHardwareMonitor\obj\Debug\OpenHardwareMonitorLib.dll
 C:\Users\Tim\Documents\GitHub\OpenHardwareMonitor\obj\Debug\OpenHardwareMonitorLib.pdb

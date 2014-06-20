@@ -10,25 +10,42 @@
     <script type='text/javascript' src='js/knockout-3.1.0.js'></script>
     <script src="js/bootstrap.min.js"></script>
 
-    <script type="text/html" id="children-template">
+    <script type="text/html" id="list-template">
         <li>
             <!-- ko if:Children.length > 0 -->
             <a class="collapsebutton" data-bind="click: function(){collapsed(!collapsed())}">
                 <span class="glyphicon" data-bind="css: collapseButtonGlyph"></span>
             </a>
             <!-- /ko -->
+            <!-- ko if: ImageURL -->
             <img data-bind="attr{src:ImageURL}">
-            <span data-bind = "text: Text"></span>
+            <!-- /ko -->
+            <span data-bind="text: Text"></span>
             <!-- ko if:Children.length > 0 -->
             <span class="badge" data-bind="text: Children.length"></span>
             <!-- /ko -->
-            <!-- ko if: Value && Value != "Value" -->
-            Min: <span data-bind="text: Min"></span> | Value: <span data-bind="text: Value"></span> | Min: <span data-bind="text: Max"></span>
-            <!-- /ko -->
+            
             <div data-bind="slideIf: !collapsed()">
-                <ul data-bind="template:{name: 'children-template', foreach: Children}"></ul>
+                <!-- ko ifnot: childrenHaveValue-->
+                    <ul data-bind="template:{name: 'list-template', foreach: Children}"></ul>
+                <!-- /ko -->
+                <!-- ko if: childrenHaveValue-->
+                    <table class="table table-condensed">
+                        <thead><th>Text<th>Min</th><th>Value</th><th>Max</th></thead>
+                        <tbody data-bind="template:{name: 'table-template', foreach: Children}"></tbody>
+                    </table>
+                <!-- /ko -->
             </div>
         </li>
+    </script>
+    
+    <script type="text/html" id="table-template">
+            <tr>
+                <td data-bind="text: Text"></td>
+                <td data-bind="text: Min"></td>
+                <td data-bind="text: Value"></td>
+                <td data-bind="text: Max"></td>
+            </tr>    
     </script>
     
     <script>
@@ -83,6 +100,11 @@
                     }
                 );
                 
+                node.childrenHaveValue = false;
+                if(node.Children[0] != undefined){
+                    node.childrenHaveValue = node.Children[0].Value != "";  
+                }
+                
                 node.collapseButtonGlyph = ko.computed(
                     function(){
                         if(node.collapsed()){
@@ -91,7 +113,7 @@
                              return "glyphicon-collapse-down";   
                         }
                     }
-                );
+                );                
                 
                 if(node.Children){
                     $.each(node.Children, function(key, child){
@@ -113,10 +135,10 @@
 <body>
     <div id="application">
         <h1>Open Hardware Monitor</h1>
-        <button class="btn btn-default" data-bind="click: refresh">Refresh <span class="glyphicon glyphicon-refresh"></span></button>
-        <br>
-
-        <ul class="collapsable" data-bind="template{name:'children-template',foreach: list}"></ul>
+        <button class="btn btn-default" data-bind="click: refresh">
+            Refresh <span class="glyphicon glyphicon-refresh"></span>
+        </button>
+        <ul class="collapsable" data-bind="template{name:'list-template',foreach: list}"></ul>
     </div>
 </body>
 

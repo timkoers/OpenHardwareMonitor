@@ -17,3 +17,7 @@ a.collapsebutton{
 a.collapsebutton:hover{
     text-decoration: none;
 }
+
+table.table {
+    width: 50%;
+}
